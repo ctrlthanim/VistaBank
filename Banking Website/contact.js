@@ -1,16 +1,13 @@
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Reset previous errors
     clearErrors();
 
-    // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    // Validate
     let isValid = true;
 
     if (name === '') {
@@ -40,7 +37,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     }
 
     if (isValid) {
-        // Here you would typically send the data to your server
         alert('Form submitted successfully!');
         this.reset();
     }
